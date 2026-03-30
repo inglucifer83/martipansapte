@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/update
+    overwrite: true
+hooks:
+  BeforeInstall:
+    - location: scripts/%ENV%/env_preparation.sh
+      timeout: 600
+      runas: ec2-user
+  AfterInstall:
+    - location: scripts/%ENV%/install_dependencies.sh
+      timeout: 600
+      runas: ec2-user
+    - location: scripts/%ENV%/clean_up.sh
+      timeout: 600
+      runas: ec2-user
+  ApplicationStop:
+    - location: scripts/%ENV%/stop_server.sh
+      timeout: 30
+      runas: ec2-user

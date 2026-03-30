@@ -1,0 +1,30 @@
+<?php
+
+ return [
+	'HOME' => 'Home',
+	'SHOP' => 'Negozio',
+	'ABOUT' => 'Informazioni',
+	'CONTACT' => 'Contatto',
+	'ORDERS' => 'Ordini',
+	'ACCOUNT' => 'Account',
+	'CART' => 'Carrello',
+	'LOGOUT' => 'Logout',
+	'LOGIN' => 'Accedi',
+	'REGISTER' => 'Registrazione',
+	'VIEW' => 'Vista',
+	'JOIN_OUR_NEWSLETTER' => 'Iscriviti alla nostra newsletter',
+	'MYSHOP' => 'MyShop',
+	'HOME_2' => '123 Commercio St, Città del Commercio',
+	'PRIVACY_POLICY' => 'Informativa sulla privacy',
+	'TERMS_OF_SERVICE' => 'Termini di servizio',
+	'COOKIE_POLICY' => 'Informativa sui cookie',
+	'🇮🇹' => '🇮🇹',
+	'🇬🇧' => '🇬🇧',
+	'TOTAL' => 'Totale',
+	'EDIT_PROFILE' => 'Modifica profilo',
+	'NAME' => 'Nome',
+	'EMAIL' => 'Email',
+	'LOGO' => 'Logo',
+	'ENTER_YOUR_EMAIL' => 'Inserisci la tua email',
+	'EMAIL_ADDRESS' => 'Indirizzo email'
+];

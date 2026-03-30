@@ -1,0 +1,24 @@
+{
+  "name": "martipansapte-infrastructure",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy:test": "cdk deploy -a \"node bin/test.js\"",
+		"diff:test": "cdk diff -a \"node bin/test.js\"",
+		"destroy:test": "cdk destroy -a \"node bin/test.js\"",
+		"bootstrap:test": "cdk bootstrap -a \"node bin/test.js\" --region eu-central-1",
+		"deploy:local": "cdk deploy -a \"node bin/local.js\"",
+		"diff:local": "cdk diff -a \"node bin/local.js\"",
+		"destroy:local": "cdk destroy -a \"node bin/local.js\"",
+		"bootstrap:local": "cdk bootstrap -a \"node bin/local.js\" --region eu-south-1",
+    "cdk": "cdk"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.212.0",
+    "constructs": "^10.4.0"
+  },
+  "devDependencies": {
+    "aws-cdk": "^2.212.0"
+  }
+}

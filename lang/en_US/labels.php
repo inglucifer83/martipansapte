@@ -1,0 +1,30 @@
+<?php
+
+ return [
+	'HOME' => 'Home',
+	'SHOP' => 'Shop',
+	'ABOUT' => 'About',
+	'CONTACT' => 'Contact',
+	'ORDERS' => 'Orders',
+	'ACCOUNT' => 'Account',
+	'CART' => 'Cart',
+	'LOGOUT' => 'Logout',
+	'LOGIN' => 'Login',
+	'REGISTER' => 'Register',
+	'VIEW' => 'View',
+	'JOIN_OUR_NEWSLETTER' => 'Join our newsletter',
+	'MYSHOP' => 'MyShop',
+	'HOME_2' => '123 Commerce St, Commerce City',
+	'PRIVACY_POLICY' => 'Privacy Policy',
+	'TERMS_OF_SERVICE' => 'Terms of Service',
+	'COOKIE_POLICY' => 'Cookie Policy',
+	'🇮🇹' => '🇮🇹',
+	'🇬🇧' => '🇬🇧',
+	'TOTAL' => 'Total',
+	'EDIT_PROFILE' => 'Edit Profile',
+	'NAME' => 'Name',
+	'EMAIL' => 'Email',
+	'LOGO' => 'Logo',
+	'ENTER_YOUR_EMAIL' => 'Enter your email',
+	'EMAIL_ADDRESS' => 'Email address'
+];

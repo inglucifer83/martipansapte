@@ -1,0 +1,50 @@
+{
+    "img-src": [],
+    "base-uri": [
+        "'self'"
+    ],
+    "font-src": [
+        "'self'",
+        "https:",
+        "data:"
+    ],
+    "frame-src": [
+        "'self'"
+    ],
+    "media-src": [
+        "'self'",
+        "https:"
+    ],
+    "style-src": [
+        "'self'",
+        "'unsafe-inline'",
+        "https:\/\/cdn.jsdelivr.net\/"
+    ],
+    "object-src": [
+        "'none'"
+    ],
+    "script-src": [
+        "'self'",
+        "'unsafe-inline'",
+        "'unsafe-eval'"
+    ],
+    "connect-src": [
+        "'self'",
+        "https:"
+    ],
+    "default-src": [
+        "'self'"
+    ],
+    "form-action": [
+        "'self'"
+    ],
+    "manifest-src": [
+        "'self'"
+    ],
+    "frame-ancestors": [
+        "'self'"
+    ],
+    "script-src-elem": [
+        "'nonce-{NONCE}'"
+    ]
+}

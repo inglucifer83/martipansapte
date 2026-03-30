@@ -1,0 +1,2 @@
+# Martipansapte 
+## Piattaforma e-commerce di base con elenco prodotti, ricerca, filtri, carrello e checkout, account utente, cronologia ordini e gestione di base dei prodotti, con interfaccia pulita orientata alla conversione.

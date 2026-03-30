@@ -1,0 +1,171 @@
+<div class="modal fade" id="user-modal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="userModalLabel">User</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('admin.users.store') }}" id="user-form" method="POST"
+                    enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" class="modal-input" name="id" id="user-id" />
+                    <div class="d-flex justify-content-start align-items-stretch" style="flex: 1;">
+                        <div class="d-flex flex-column justify-content-start align-items-start" style="flex: 1;"><input
+                                type="text" class="form-control modal-input" id="user-id" name="id"
+                                value="{{ isset($user) && $user ? $user->id : '' }}" readonly>
+                            <div class="input-group mb-3" style="width: initial;">
+                                <span class="input-group-text">Name</span>
+                                <input type="text" name="name" placeholder="Name" class="form-control modal-input"
+                                    id="user-name" placeholder="Name"
+                                    value="{{ isset($user) && $user ? $user->name : '' }}">
+                            </div>
+                            <div class="input-group mb-3" style="width: initial;">
+                                <span class="input-group-text">Email</span>
+                                <input type="text" name="email" placeholder="Email"
+                                    class="form-control modal-input" id="user-email" placeholder="Email"
+                                    value="{{ isset($user) && $user ? $user->email : '' }}">
+                            </div>
+
+                            <div class="d-flex flex-column justify-content-start align-items-start">
+                                <img src="" width="60" height="60" id="user-avatar-preview" />
+
+                                <div class="input-group mb-3" style="margin-top: 0.5vw; width: initial;"><span
+                                        class="input-group-text">Avatar</span><input name="avatar" id="user-avatar"
+                                        type="file" class="form-control" accept=".png,.jpg,.gif,.jpeg,.webp" /></div>
+                            </div>
+                            <div class="input-group mb-3" style="width: initial;">
+                                <span class="input-group-text">Display Name</span>
+                                <input type="text" name="display_name" placeholder="Display Name"
+                                    class="form-control modal-input" id="user-display_name" placeholder="Display Name"
+                                    value="{{ isset($user) && $user ? $user->display_name : '' }}">
+                            </div>
+                            <div class="input-group mb-3" style="width: initial;">
+                                <span class="input-group-text">Phone</span>
+                                <input type="tel" name="phone" placeholder="Phone"
+                                    class="form-control modal-input" id="user-phone" placeholder="Phone"
+                                    value="{{ isset($user) && $user ? $user->phone : '' }}">
+                            </div>
+                            <div class="input-group mb-3" style="width: initial;">
+                                <span class="input-group-text">Email Verified At</span>
+                                <input type="datetime-local" name="email_verified_at" placeholder="Email Verified At"
+                                    class="form-control modal-input" id="user-email_verified_at"
+                                    placeholder="Email Verified At"
+                                    value="{{ isset($user) && $user ? $user->email_verified_at : '' }}">
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" name="marketing_opt_in" value="1"
+                                    @checked(isset($user) && $user ? $user->marketing_opt_in : false) type="checkbox" role="switch"
+                                    id="user-marketing_opt_in">
+                                <label class="form-check-label" for="user-marketing_opt_in">Marketing Opt In</label>
+                            </div>
+                            <div class="input-group mb-3" style="width: initial;">
+                                <span class="input-group-text">Last Login At</span>
+                                <input type="datetime-local" name="last_login_at" placeholder="Last Login At"
+                                    class="form-control modal-input" id="user-last_login_at"
+                                    placeholder="Last Login At"
+                                    value="{{ isset($user) && $user ? $user->last_login_at : '' }}">
+                            </div>
+                            <div class="input-group mb-3" style="width: initial;">
+                                <span class="input-group-text">Role</span>
+                                <input type="text" name="role" placeholder="Role"
+                                    class="form-control modal-input" id="user-role" placeholder="Role"
+                                    value="{{ isset($user) && $user ? $user->role : '' }}">
+                            </div>
+                            <div class="input-group mb-3" style="width: initial;">
+                                <span class="input-group-text">Created At</span>
+                                <input type="datetime-local" name="created_at" placeholder="Created At"
+                                    class="form-control modal-input" id="user-created_at" placeholder="Created At"
+                                    value="{{ isset($user) && $user ? $user->created_at : '' }}">
+                            </div>
+                            <div class="input-group mb-3" style="width: initial;">
+                                <span class="input-group-text">Updated At</span>
+                                <input type="datetime-local" name="updated_at" placeholder="Updated At"
+                                    class="form-control modal-input" id="user-updated_at" placeholder="Updated At"
+                                    value="{{ isset($user) && $user ? $user->updated_at : '' }}">
+                            </div>
+                            <div class="input-group mb-3" style="width: initial;">
+                                <span class="input-group-text">Deleted At</span>
+                                <input type="datetime-local" name="deleted_at" placeholder="Deleted At"
+                                    class="form-control modal-input" id="user-deleted_at" placeholder="Deleted At"
+                                    value="{{ isset($user) && $user ? $user->deleted_at : '' }}">
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" form="user-form" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@push('js')
+    <script>
+        let users = null;
+
+        fetch(location.href, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => response.json().then(json => users = json));
+
+        const clearInputs = () => {
+            const elements = document.querySelectorAll('.modal-input');
+            for (let i = 0; i < elements.length; i += 1) {
+                const input = elements[i];
+                input.value = '';
+            }
+            const previews = document.querySelectorAll('[id$="-preview"]');
+            for (let i = 0; i < previews.length; i += 1) {
+                const preview = previews[i];
+                preview.src = '';
+            }
+        }
+
+        const modalElement = document.getElementById('user-modal');
+        modalElement.addEventListener('show.bs.modal', function(e) {
+            const button = e.relatedTarget;
+            const userId = button.dataset.id;
+
+            const title = document.getElementById('userModalLabel');
+            title.innerHTML = "New User";
+
+            if (userId) {
+                title.innerHTML = "Edit User";
+
+                const user = users.find(user => user.id == userId);
+
+                if (user) {
+                    for (const field in user) {
+                        const element = document.getElementById(`user-${field}`);
+                        if (element) {
+                            if (!element.matches('[type="file"]') && !element.matches('[type="checkbox"]') && !
+                                element.matches('[type="radio"]')) {
+                                element.value = user[field];
+                            } else if (element.matches('[type="checkbox"]')) {
+                                element.checked = user[field];
+                            } else if (element.matches('[type="radio"]')) {
+                                element.checked = user[field] == element.value;
+                            }
+
+                            const preview = document.getElementById(`user-${field}-preview`);
+                            if (preview && preview.matches('img')) {
+                                preview.src = user[field].startsWith('http') ? user[field] :
+                                    `{{ asset('storage/') }}/${user[field]}`;
+                            }
+                        }
+                    }
+                } else {
+                    clearInputs();
+                }
+            } else {
+                clearInputs();
+            }
+        });
+    </script>
+@endpush
