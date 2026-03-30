@@ -17,7 +17,7 @@ class AccountController extends Controller
         $addresses = auth()->check() ? auth()->user()->addresses : collect();
         // Recent orders for quick access
         $orders = auth()->check() ? auth()->user()->orders : collect();
-        $data = ['addresses' => $addresses, 'orders' => $orders];
+        $data = ['addresses' => $addresses];
         if ($request->expectsJson()) {
             return response($data);
         } else {
