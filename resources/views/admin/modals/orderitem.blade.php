@@ -90,7 +90,7 @@
 </div>
 
 @push('js')
-    <script nonce="@nonce">
+    <script>
         let order_items = null;
 
         fetch(location.href, {

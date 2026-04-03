@@ -113,7 +113,7 @@
 </div>
 
 @push('js')
-    <script nonce="@nonce">
+    <script>
         let payments = null;
 
         fetch(location.href, {

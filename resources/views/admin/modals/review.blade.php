@@ -92,7 +92,7 @@
 </div>
 
 @push('js')
-    <script nonce="@nonce">
+    <script>
         let reviews = null;
 
         fetch(location.href, {

@@ -124,7 +124,7 @@
 </div>
 
 @push('js')
-    <script nonce="@nonce">
+    <script>
         let addresses = null;
 
         fetch(location.href, {
