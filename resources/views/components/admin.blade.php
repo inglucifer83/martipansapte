@@ -102,7 +102,7 @@
 
         .sidebar .list-group-item.selected {
             background-color: #F59E0B;
-            color: #2563EB;
+            color: #F59E0B;
             border-radius: 0rem 0rem 0rem 0rem;
         }
 
