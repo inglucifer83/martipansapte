@@ -83,7 +83,7 @@
 </div>
 
 @push('js')
-    <script>
+    <script nonce="@nonce">
         let images = null;
 
         fetch(location.href, {
