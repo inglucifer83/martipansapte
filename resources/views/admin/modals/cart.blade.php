@@ -72,7 +72,7 @@
 </div>
 
 @push('js')
-    <script>
+    <script nonce="@nonce">
         let carts = null;
 
         fetch(location.href, {

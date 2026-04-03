@@ -3,7 +3,7 @@
     <x-slot:title>Product</x-slot>
 
     <div class="d-flex justify-content-start align-items-stretch" style="flex: 1;">
-        <div class="accordion mb-3" id="accordion-r0g8F" style="flex: 1;">
+        <div class="accordion mb-3" id="accordion-gD2EW" style="flex: 1;">
             <div class=\accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -11,7 +11,7 @@
                         Group One
                     </button>
                 </h2>
-                <div id="collapse-r0g8F" class="accordion-collapse collapse show" data-bs-parent="#accordion-r0g8F">
+                <div id="collapse-gD2EW" class="accordion-collapse collapse show" data-bs-parent="#accordion-gD2EW">
                     <div class="accordion-body flex-column justify-content-start align-items-start"><input
                             type="text" class="form-control detail-input" id="product-id" name="id"
                             value="{{ isset($product) && $product ? $product->id : '' }}" readonly>
@@ -100,11 +100,11 @@
             <div class=\accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collpase-r0g8F-1" aria-expanded="false" aria-controls="collapse-r0g8F-1">
+                        data-bs-target="#collpase-gD2EW-1" aria-expanded="false" aria-controls="collapse-gD2EW-1">
 
                     </button>
                 </h2>
-                <div id="collapse-r0g8F" class="accordion-collapse" data-bs-parent="#accordion-r0g8F">
+                <div id="collapse-gD2EW" class="accordion-collapse" data-bs-parent="#accordion-gD2EW">
                     <div class="accordion-body flex-column justify-content-start align-items-start">
                         <div class="input-group mb-3" style="width: initial;">
                             <span class="input-group-text">Inventory Quantity</span>
