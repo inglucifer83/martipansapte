@@ -3,16 +3,16 @@
     <x-slot:title>User</x-slot>
 
     <div class="d-flex justify-content-start align-items-stretch" style="flex: 1;">
-        <div class="accordion mb-3" id="collpase-container-zHkq5" style="flex: 1;">
+        <div class="accordion mb-3" id="collpase-container-sLZHE" style="flex: 1;">
             <div class=\accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collpase-zHkq5" aria-expanded="true" aria-controls="collapse-zHkq5">
+                        data-bs-target="#collpase-sLZHE" aria-expanded="true" aria-controls="collapse-sLZHE">
 
                     </button>
                 </h2>
-                <div id="collapse-zHkq5" class="accordion-collapse collapse show"
-                    data-bs-parent="#collpase-container-zHkq5">
+                <div id="collapse-sLZHE" class="accordion-collapse collapse show"
+                    data-bs-parent="#collpase-container-sLZHE">
                     <div class="accordion-body flex-column justify-content-start align-items-start"><input
                             type="text" class="form-control detail-input" id="user-id" name="id"
                             value="{{ isset($user) && $user ? $user->id : '' }}" readonly>
