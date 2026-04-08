@@ -101,7 +101,7 @@
         }
 
         .sidebar .list-group-item.selected {
-            background-color: #F59E0B;
+background-color: #F59E0B;
             color: #F59E0B;
             border-radius: 0rem 0rem 0rem 0rem;
         }
@@ -189,10 +189,10 @@
     </div>
     <x-admin-modal />
     @stack('modals')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
-    <script>
+    <script nonce="@nonce" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script nonce="@nonce" src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+    <script nonce="@nonce">
         (function() {
             const tables = document.querySelectorAll('.data-table');
             if (tables.length > 0) {
@@ -230,7 +230,7 @@
             }
         });
     </script>
-    <script src="{{ asset('/js/admin/modal.js') }}"></script>
+    <script nonce="@nonce" src="{{ asset('/js/admin/modal.js') }}"></script>
     @stack('js')
 </body>
 

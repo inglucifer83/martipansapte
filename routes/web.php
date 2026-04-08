@@ -31,7 +31,7 @@ Route::get('', [MainController::class, 'home'])->name('home');
 
 Route::get('about', [MainController::class, 'about'])->name('about');
 
-Route::get('contact', [MainController::class, 'contact'])->name('contact_us');
+Route::get('contact', [MainController::class, 'contactMe'])->name('contact_me');
 Route::prefix('products')->name('products.')->group(function() {
 	Route::middleware('auth:users')->group(function() {
 		Route::post('reviews/{product}', [ProductsController::class, 'storeReview'])->name('reviews.store');

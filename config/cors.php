@@ -1,74 +1,34 @@
 <?php
 
-namespace App\Http;
+return [
 
-use Illuminate\Foundation\Http\Kernel as HttpKernel;
+    /*
+    |--------------------------------------------------------------------------
+    | Cross-Origin Resource Sharing (CORS) Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure your settings for cross-origin resource sharing
+    | or "CORS". This determines what cross-origin operations may execute
+    | in web browsers. You are free to adjust these settings as needed.
+    |
+    | To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+    |
+    */
 
-class Kernel extends HttpKernel
-{
-    /**
-     * The application's global HTTP middleware stack.
-     *
-     * These middleware are run during every request to your application.
-     *
-     * @var array<int, class-string|string>
-     */
-    protected $middleware = [
-        // \App\Http\Middleware\TrustHosts::class,
-        \App\Http\Middleware\TrustProxies::class,
-        \Illuminate\Http\Middleware\HandleCors::class,
-        \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
-        \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-        ___%TRIM%___,
-        ___%NULLIFY%___,
-        \App\Http\Middleware\CheckLocale::class,
-        \App\Http\Middleware\AddVariables::class,
-        ___%ALL_MIDDLEWARES%______%TESTING_MIDDLEWARES%______%SERVERLESS_MIDDLEWARES%___
-    ];
+    'paths' => [],
 
-    /**
-     * The application's route middleware groups.
-     *
-     * @var array<string, array<int, class-string|string>>
-     */
-    protected $middlewareGroups = [
-        'web' => [
-            \App\Http\Middleware\EncryptCookies::class,
-            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-            \Illuminate\Session\Middleware\StartSession::class,
-            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            ___%CSRF%___,
-            \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            ___%CSP%___,
-            ___%WEB_MIDDLEWARES%___
-        ],
+    'allowed_methods' => [],
 
-        'api' => [
-            // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-            'throttle:api',
-            \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            ___%API_MIDDLEWARES%___
-        ],
-    ];
+    'allowed_origins' => ['*'],
 
-    /**
-     * The application's route middleware.
-     *
-     * These middleware may be assigned to groups or used individually.
-     *
-     * @var array<string, class-string|string>
-     */
-    protected $routeMiddleware = [
-        'auth' => \App\Http\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
-        'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
-        'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
-        'signed' => \App\Http\Middleware\ValidateSignature::class,
-        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        ___%MIDDLEWARES%___
-    ];
-}
+    'allowed_origins_patterns' => [],
+
+    'allowed_headers' => [],
+
+    'exposed_headers' => ["Content-Disposition"],
+
+    'max_age' => 0,
+
+    'supports_credentials' => false,
+
+];

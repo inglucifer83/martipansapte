@@ -3,7 +3,7 @@
     <x-slot:title>Product</x-slot>
 
     <div class="d-flex justify-content-start align-items-stretch" style="flex: 1;">
-        <div class="accordion mb-3" id="accordion-KVpIo" style="flex: 1;">
+<div class="accordion mb-3" id="accordion-0-0" style="flex: 1;">
             <div class=\accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -11,7 +11,7 @@
                         Group One
                     </button>
                 </h2>
-                <div id="collapse-KVpIo" class="accordion-collapse collapse show" data-bs-parent="#accordion-KVpIo">
+<div id="collapse-0-0" class="accordion-collapse collapse show" data-bs-parent="#accordion-0-0">
                     <div class="accordion-body flex-column justify-content-start align-items-start"><input
                             type="text" class="form-control detail-input" id="product-id" name="id"
                             value="{{ isset($product) && $product ? $product->id : '' }}" readonly>
@@ -100,11 +100,11 @@
             <div class=\accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collpase-KVpIo-1" aria-expanded="false" aria-controls="collapse-KVpIo-1">
+data-bs-target="#collpase-0-0-1" aria-expanded="false" aria-controls="collapse-0-0-1">
 
                     </button>
                 </h2>
-                <div id="collapse-KVpIo" class="accordion-collapse" data-bs-parent="#accordion-KVpIo">
+                <div id="collapse-0-0" class="accordion-collapse" data-bs-parent="#accordion-0-0">
                     <div class="accordion-body flex-column justify-content-start align-items-start">
                         <div class="input-group mb-3" style="width: initial;">
                             <span class="input-group-text">Inventory Quantity</span>

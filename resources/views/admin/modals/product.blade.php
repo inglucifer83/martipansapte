@@ -212,7 +212,7 @@
 </div>
 
 @push('js')
-    <script>
+    <script nonce="@nonce">
         let products = null;
 
         fetch(location.href, {
