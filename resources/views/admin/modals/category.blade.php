@@ -97,7 +97,7 @@
 </div>
 
 @push('js')
-    <script>
+    <script nonce="@nonce">
         let categories = null;
 
         fetch(location.href, {

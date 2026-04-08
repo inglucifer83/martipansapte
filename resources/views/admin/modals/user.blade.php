@@ -104,7 +104,7 @@
 </div>
 
 @push('js')
-    <script>
+    <script nonce="@nonce">
         let users = null;
 
         fetch(location.href, {

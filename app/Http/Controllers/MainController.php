@@ -69,7 +69,7 @@ class MainController extends Controller
     /**
      * @return \Illuminate\Http\Response|\Illuminate\Contracts\Routing\ResponseFactory
      */
-    public function contact(ValidatedRequest $request)
+    public function contactMe(ValidatedRequest $request)
     {
         $data = ['request' => $request];
         if ($request->expectsJson()) {
