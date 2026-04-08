@@ -75,7 +75,7 @@
 </div>
 
 @push('js')
-    <script>
+    <script nonce="@nonce">
         let tags = null;
 
         fetch(location.href, {

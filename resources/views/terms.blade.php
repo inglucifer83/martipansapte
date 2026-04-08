@@ -24,7 +24,7 @@
                     style="margin-left: 1vw; margin-right: 1vw; text-decoration: none; color: var(--primary)">
                     {{ __('labels.ABOUT') }}
                 </a>
-                <a id="a-3" href="{{ route('contact') }}"
+                <a id="a-3" href="{{ route('contact_me') }}"
                     style="margin-left: 1vw; margin-right: 1vw; text-decoration: none; color: var(--primary)">
                     {{ __('labels.CONTACT') }}
                 </a>
@@ -76,7 +76,7 @@
                     style="margin-left: 1vw; margin-right: 1vw; text-decoration: none; color: var(--background)">
                     {{ __('labels.ABOUT') }}
                 </a>
-                <a id="a-10" href="{{ route('contact') }}"
+                <a id="a-10" href="{{ route('contact_me') }}"
                     style="margin-left: 1vw; margin-right: 1vw; text-decoration: none; color: var(--background)">
                     {{ __('labels.CONTACT') }}
                 </a>
